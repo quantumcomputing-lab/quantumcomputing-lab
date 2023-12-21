@@ -3,7 +3,7 @@
 <!--Converted with LaTeX2HTML 2022 (Released January 1, 2022) -->
 <HTML lang="en">
 <HEAD>
-<TITLE>2022 Nobel Prize</TITLE>
+<TITLE>Models of quantum computation</TITLE>
 
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
 <META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
@@ -11,44 +11,64 @@
 
 <LINK REL="STYLESHEET" HREF="sjv_website.css">
 
-<LINK REL="next" HREF="node10.html">
 <LINK REL="previous" HREF="node8.html">
-<LINK REL="next" HREF="node10.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next_g.png"> 
 <A
- HREF="node10.html">
-<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
-<A
- HREF="node7.html">
+ HREF="node1.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node8.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A
- HREF="node10.html">IEEE QCE 2022</A>
 <B> Up:</B> <A
- HREF="node7.html">Some observations</A>
+ HREF="node1.html">Some observations</A>
 <B> Previous:</B> <A
- HREF="node8.html">Comparing computing plaforms</A>
+ HREF="node8.html">Quantum Data Science</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A ID="SECTION00072000000000000000">
-2022 Nobel Prize</A>
+<H2><A ID="SECTION00018000000000000000">
+Models of quantum computation</A>
 </H2>
-It's exciting when the stalwarts in your field receive Nobel prize. Beyond the egotistical satisfaction, it has a multiplicative impact on public education, government support, industry interest as well as drawing the best of future talent into the field. Three stalwarts of Quantum Information Science received the Nobel prize yesterday (not to be confused with "quantum physics" -  a field which no longer thinks deeply about the fundamental issues). Their work shed light on the second of the two differentiators of quantum from classical: entanglement (the first is superposition). What is it?
+I wanted to talk about various models of quantum computation today (not to be confused with implementation). This is heavily influenced by discussions on the stackexchange. Quantum computing is a different paradigm of computing. It seems like there are five different models of quantum computing (not to be confused with the technology for implementing them). These are different models of how to compute outputs from inputs using quantum resources (i.e. resources which are inherently non-classical, like entanglement and coherence). They are not strictly mutually exclusive and have conceptual overlaps between them.
 
 <P>
-Suppose you have three coins (the three Paulis for the "experts"). You toss them multiple times and observe in how many cases the first and second coins are the same. Call that observation N12. Divide it by the total number of times you did the experiment (say M) and call the result p12. Thus, p12 is the "probability" that first two coins are same. Now do the same to get p23 and p13. Bell's inequality (a very trivial classical inequality) says p12 + p23 + p13 is larger than 1. This is classically a trivial result because any two coins out of three coins is bound to be identical. Quantumly, this inequality is violated (in a specific experimental setting). That is p12 + p23 + p12 is smaller than 1.
+Model 1 (the most common): The Unitary Circuit Model in which you perform a sequence of unitary transformations on a set of qubits initialized to 0, yielding a classical output s=0,1^n string after measurement in the standard basis.
 
 <P>
-This should make no "sense". If it does, we probably did not understand (as Bohrs famously said). John Bell died before he could be awarded the Nobel prize for his insights from the Bell's inequality. The recipients yesterday significantly extended his work (such as by framing the CHSH inequality).
+Model 2 (the second most common): Quantum annealing generalizes the adiabatic model of computation. To understand it, it will help to discuss classical simulated annealing first. Simulated annealing is a means of minimizing the energy of a system, expressed in the form of a Hamiltonian. It is a random walk on the possible assignments to the local variables. The transition probability depends on:
+a) the difference in energy between the configurations before and after each step of the walk
+b) a temperature parameter which governs the probability with which the walk is allowed to perform a step in the random walk
+One starts with the system at infinite temperature, which is a fancy way of saying that you allow all possible transitions, regardless of increases or decreases in energy. You then lower the temperature according to some schedule, so that as time goes on, changes in state which increase the energy become less and less likely (though still possible). The limit is zero temperature, in which any transition which decreases energy is allowed, but any transition which increases energy is simply forbidden. If you take long enough to decrease the temperature from infinite to near zero, you are guaranteed to reach the global optimum. Quantum annealing is motivated by considering what evolution occurs when one does not evolve the Hamiltonian in the adiabatic regime.
+
+<P>
+Model 3 (closely related to QECC): Measurement-based quantum computation (MBQC) is a model for adaptive single-qubit measurements performed on a large entangled state. In this model, future operations can depend on the outcomes of intermediate measurements. Specifically, we prepare a large entangled state and then perform a sequence of controlled-Z operations on pairs of qubits, according to the edge-relations of a graph (commonly, a rectangular grid or hexagonal lattice). Then, we perform a sequence of measurements on these qubits (some perhaps in the standard basis, but the majority not in the standard basis. Each measurement produces +1 or -1 (often labelled zero or one respectively). The angle can depend on previous measurements (in a way computed by a classical control system). The final answer is calculated from the outcomes of the measurements. This model is the motivating concept behind the class IQP, which is one means of demonstrating that a quantum computer is difficult to simulate, and Blind Quantum Computing, which is one way to achieve secure computation using quantum resources. It is also used in error correction.
+
+<P>
+Model 4: The adiabatic model is amenable to optimization problems. It is based on the adiabatic theorem: if there is always an energy gap between the ground state of and its first excited state, and if the Hamiltonian does not vary too quickly or abruptly, then the probability of getting the correct answer increases if you run the computation slowly enough. In this model, you start with the register in some simple state such as bell state and subject these qubits to an interaction Hamiltonian the initial state is the unique ground state (the state with the lowest energy). Then, choose a final Hamiltonian, which has a unique ground state which encodes the answer to a problem you are interested in. For instance, if you want to solve a constraint satisfaction problem, you could define a Hamiltonian <!-- MATH
+ $H_1= sum h_c$
+ -->
+<SPAN CLASS="MATH"><IMG
+ STYLE="height: 2.19ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$H_1= sum h_c$"></SPAN>, where the sum is taken over the constraints <SPAN CLASS="MATH"><IMG
+ STYLE="height: 1.23ex; vertical-align: -0.12ex; " SRC="img6.svg"
+ ALT="$c$"></SPAN> of the classical problem, and where each <SPAN CLASS="MATH"><IMG
+ STYLE="height: 2.19ex; vertical-align: -0.46ex; " SRC="img7.svg"
+ ALT="$h_c$"></SPAN> is an operator which imposes an energy penalty (a positive energy contribution) to any standard basis state representing a classical assignment which does not satisfy the constraint <SPAN CLASS="MATH"><IMG
+ STYLE="height: 1.23ex; vertical-align: -0.12ex; " SRC="img6.svg"
+ ALT="$c$"></SPAN>. Next, define a time interval and a time-varying Hamiltonian. A common but not necessary choice is to simply take a linear interpolation such that  H(final)= H_1. Now, allow the system to evolve under the continuously varying Hamiltonian and then measure the qubits at the output to obtain an outcome.
+
+<P>
+Model 5: Random quantum walk is a quantum variation on a random walk. Whereas a classical random walker takes a step in a randomly determined direction, a quantum walker takes a step in a direction determined by a quantum coin register, which at each step is flipped by a unitary transformation rather than changed by re-sampling a random variable. The main difference between this and a random walk is that the different possible trajectories of the walker are being performed coherently in superposition, so that they can destructively interfere. This leads to a walker behavior which is more like ballistic motion than diffusion.
+
+<P>
+Will be curios to know if you agree/ disagree with the above or any other random thought!
 
 <P>
 Thanks,
@@ -57,28 +77,21 @@ Thanks,
 Samudra
 
 <P>
-p.s. The specific experimental setting is as follows: you need to prepare two sets of "entangled" coins and ship one set to New York and do the measurements described above in Kolkata. The New York coins impact the Kolkata coins in a mysterious way we do not "understand" (as the word "understanding" is based on classical facts stored in our brain). It is what Einstein called "spooky action at a distance" and went to grave unreconciled with. It has been decisively "proven" to be true in 2015 in a no loophole experiment (barring extreme loopholes like everything is a simulation).
-
-<P>
 
 <DIV CLASS="navigation"><HR>
 <!--Navigation Panel-->
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next_g.png"> 
 <A
- HREF="node10.html">
-<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
-<A
- HREF="node7.html">
+ HREF="node1.html">
 <IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
 <A
  HREF="node8.html">
 <IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A
- HREF="node10.html">IEEE QCE 2022</A>
 <B> Up:</B> <A
- HREF="node7.html">Some observations</A>
+ HREF="node1.html">Some observations</A>
 <B> Previous:</B> <A
- HREF="node8.html">Comparing computing plaforms</A></DIV>
+ HREF="node8.html">Quantum Data Science</A></DIV>
 <!--End of Navigation Panel-->
 
 </BODY>
