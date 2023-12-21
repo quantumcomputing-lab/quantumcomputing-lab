@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2022 (Released January 1, 2022) -->
+<HTML lang="en">
+<HEAD>
+<TITLE>Comparing computing plaforms</TITLE>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2022">
+
+<LINK REL="STYLESHEET" HREF="sjv_website.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node9.html">2022 Nobel Prize</A>
+<B> Up:</B> <A
+ HREF="node7.html">Some observations</A>
+<B> Previous:</B> <A
+ HREF="node7.html">Some observations</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00071000000000000000">
+Comparing computing plaforms</A>
+</H2>
+In an old post, I tried to share my understanding of the various models of quantum computation. Here, I wanted to deep-dive into the available technologies for the physical realization of the most common model of quantum computation: Unitary Circuit Model for Universal Computation. Most of the content is a summary of the excellent post from Russ Fein that canbe found here: https://quantumtech.blog/2022/10/20/quantum-computing-modalities-a-qubit-primer-revisited/
+
+<P>
+Currently, there are five main physical platforms for realizing quantum computing: Superconducting, Trapped ions, Neutral atoms, Photonics and Quantum dots. Other modalities include ones which are futuristic such as topological quantum computers, ones which are under active research such as NV diamonds, ones which are specific purpose and not considered suitable for general computing such as quantum annealers and finally ones that are no longer serious contenders such as NMR.
+
+<P>
+Below I describe in some detail the five main contenders:
+
+<P>
+
+<OL>
+<LI>Superconducting platform:
+<BR>
+Some of the key players working on this platform to realize quantum computing at scale are Google, IBM, QCI, Rigetti, QuTech, OQC, IQM and OriginQuantum. In superconducting transmon based quantum computers, the qubit is physically realized using quantized states of a superconducting device called Joesphson junction (a pair of superconducting metal strips maintained at nearly absolute zero separated by about 1 nm). The two qubit states are a result of how the electrons cross the gap.
+
+<P>
+One of the key advantages of this platform is that it can leverage well-established lithographic processes for manufacturing. The main drawback of this platform however is the low number of gate operations than can be performed before the quantum register loses its coherence. Registers of size 127 qubits have been realized which exhibit decoherence times of 15-256 micro seconds and 2-qubit entangling gate fidelities of 99-99.7%. The time to operate a logical gate ranges between 10-196 ns (leading to worst-case duty cycle of about 77.
+
+<P>
+</LI>
+<LI>Trapped ion platform:
+<BR>
+Some of the key players working on this platform to realize quantum computing at scale are ionQ, Quantinuum, AQT, Oxford Ionics, and Universal Quantum. In ion trap based quantum computers, the qubit is physically realized using ions that are held in place by electric fields. The two qubit states represent the energy levels of the valence electrons which can be excited to higher orbits using laser pulses.
+
+<P>
+One of the key advantages of this platform is the very high register coherence times (as compared to other platforms). The main concern however is scaleability (given the presence of ion charges and use of lasers). Registers of size 32 qubits have been realized which exhibit decoherence times of 0.2-50s and 2-qubit entangling gate fidelities of 98.5 - 99.2%. The time to operate a logical gate is about 1 microsecond (leading to worst-case duty cycle of 67).
+
+<P>
+</LI>
+<LI>Neutral atom platform:
+<BR>
+Some of the key players working on this platform to realize quantum computing at scale are ColdQuanta, quEra, Pasqal, Atom Computing. In neutral atom based quantum computers, the qubit is physically realized using atoms kept in-place by optical tweezers (lasers) at ultra-low temperatures in vacuum. The two qubit states represent the atomic energy levels. When laser pulses are fired at these atoms, the outer electron radius expands, creating Rydberg states, which helps to entangle multiple atoms with each other.
+
+<P>
+The standout advantage of this platform is the degree of connectivity as it relatively easy to get all the qubits to interact with each other. This makes it easy to implement multi-qubit gates involving more than two qubits. Quantum registers of size 100 qubits have been realized which exhibit qubit decoherence times of 0.2-10s and 2-qubit entangling gate fidelities of 97.4%. The time to operate a logical gate is about 1 microsecond (leading to a very high duty cycle of 5 million).
+
+<P>
+</LI>
+<LI>Photonic platform:
+<BR>
+Some of the key players working on this platform to realize quantum computing at scale are psiQuantum, Xanadu, Orca computing, and Quix Quantum. In photonic quantum computers, the qubit is physically realized using photons. The two qubit states represent the horizontal and vertical polarizations of the photon. The gates are implemented using phase shifters and beam splitters located amidst a network of optical channels on a custom chip
+
+<P>
+The key advantage of this platform is that standard CMOS fabrication facilities can be utilized. The main concern however is the difficulty in implementing 2-qubit entangling gates (as photons, being massless and chargeless, do not easily interact with each other). Quantum registers with 20 photons have been realized which exhibit qubit decoherence times of 150 microseconds and 2-qubit entangling gate fidelities of 98%. The time to operate a logical gate can be as low as 1ns (leading to a duty cycle of 150,000).
+
+<P>
+</LI>
+<LI>Quantum dot platform:
+<BR>
+Some of the key players working on this platform to realize quantum computing at scale are Intel, Quantum Brilliance, Diraq, Silicon Quantum Computing, and Quantum Motion. In quantum dot based computers, the qubit is physically realized using artificial atoms created by adding an electron to a pure silicon atom which is held in place by electric fields. The two qubit states represent by the discrete energy level spectra of spin states of the embedded electron (or donor impurities). The gates are implemented using microwaves.
+
+<P>
+One advantage of this platform is that it leverages existing semiconductor technology. The main concern regarding this platform is scaleability. Quantum registers with only two(!) qubits seem to  have been realized. These register exhibit decoherence times of 1 microsecond - 0.55 seconds and 2-qubit entangling gate fidelities of 90-98%. The time to operate a logical gate can be as low as 0.8-80ns (leading to a worst case duty cycle of around 13).
+</LI>
+</OL>
+
+<P>
+In conclusion, as I have mentioned before, quality assurance for quantum computers for stable and reproducible computing is an emerging crticial focus area across all these platforms. It is no longer enough to produce interesting results in the lab.
+
+<P>
+Thanks,
+
+<P>
+Samudra
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node9.html">2022 Nobel Prize</A>
+<B> Up:</B> <A
+ HREF="node7.html">Some observations</A>
+<B> Previous:</B> <A
+ HREF="node7.html">Some observations</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

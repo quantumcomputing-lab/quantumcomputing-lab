@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2022.1.4)  21 DEC 2023 19:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021) (preloaded format=pdflatex 2022.1.4)  21 DEC 2023 19:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -386,32 +386,47 @@ latex2htmlLength oddsidemargin=53.0pt
 latex2htmlLength evensidemargin=53.0pt
 
 
-:tex2html_wrap_indisplay277:lthtmlCropMarkHeight:=13.5pt
+:tex2html_wrap_indisplay410:lthtmlCropMarkHeight:=13.5pt
 
-:tex2html_wrap_indisplay277:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
+:tex2html_wrap_indisplay410:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
 Preview: Tightpage -32890 -32890 32890 32890
 [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-:tex2html_wrap_indisplay278:lthtmlCropMarkHeight:=13.5pt
+:tex2html_wrap_indisplay411:lthtmlCropMarkHeight:=13.5pt
 
-:tex2html_wrap_indisplay278:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
+:tex2html_wrap_indisplay411:lthtmlCropMarkDepth:=2.5pt:1ex:=4.30554pt
 [2]
 
-:tex2html_wrap_indisplay279:lthtmlCropMarkHeight:=17.50009pt
+:tex2html_wrap_indisplay412:lthtmlCropMarkHeight:=17.50009pt
 
-:tex2html_wrap_indisplay279:lthtmlCropMarkDepth:=6.50009pt:1ex:=4.30554pt
+:tex2html_wrap_indisplay412:lthtmlCropMarkDepth:=6.50009pt:1ex:=4.30554pt
 [3]
 
-:tex2html_wrap_indisplay280:lthtmlCropMarkHeight:=17.50009pt
+:tex2html_wrap_indisplay413:lthtmlCropMarkHeight:=17.50009pt
 
-:tex2html_wrap_indisplay280:lthtmlCropMarkDepth:=6.50009pt:1ex:=4.30554pt
-[4] (./images.aux)
+:tex2html_wrap_indisplay413:lthtmlCropMarkDepth:=6.50009pt:1ex:=4.30554pt
+[4]
+
+:tex2html_wrap_inline430:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_inline430:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+[5]
+
+:tex2html_wrap_inline432:lthtmlCropMarkHeight:=10.30554pt
+
+:tex2html_wrap_inline432:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
+[6]
+
+:tex2html_wrap_inline434:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_inline434:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.30554pt
+[7] (./images.aux)
 Package rerunfilecheck Info: File `images.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10011 strings out of 478353
- 155515 string characters out of 5848101
+ 10014 strings out of 478353
+ 155533 string characters out of 5848101
  449107 words of memory out of 5000000
  28006 multiletter control sequences out of 15000+600000
  405129 words of font info for 35 fonts, out of 8000000 for 9000
@@ -421,11 +436,13 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on images.pdf (4 pages, 43319 bytes).
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
+al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on images.pdf (7 pages, 61431 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
+ 75 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

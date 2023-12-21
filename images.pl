@@ -2,6 +2,16 @@
 # Associate images original text with physical files.
 
 
+$key = q/H_1=sumh_c;MSF=1.6;AAT/;
+$cached_env_img{$key} = q|<IMG
+ STYLE="height: 2.19ex; vertical-align: -0.46ex; " SRC="|."$dir".q|img5.svg"
+ ALT="$H_1= sum h_c$">|; 
+
+$key = q/c;MSF=1.6;AAT/;
+$cached_env_img{$key} = q|<IMG
+ STYLE="height: 1.23ex; vertical-align: -0.12ex; " SRC="|."$dir".q|img6.svg"
+ ALT="$c$">|; 
+
 $key = q/displaystyle;Biglvert{y}Bigrangle;MSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
  STYLE="height: 4.40ex; vertical-align: -1.63ex; " SRC="|."$dir".q|img4.svg"
@@ -21,6 +31,11 @@ $key = q/displaystylelangle{x}rvert;MSF=1.6;AAT/;
 $cached_env_img{$key} = q|<IMG
  STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="|."$dir".q|img1.svg"
  ALT="$\displaystyle \langle {x} \rvert$">|; 
+
+$key = q/h_c;MSF=1.6;AAT/;
+$cached_env_img{$key} = q|<IMG
+ STYLE="height: 2.19ex; vertical-align: -0.46ex; " SRC="|."$dir".q|img7.svg"
+ ALT="$h_c$">|; 
 
 1;
 
